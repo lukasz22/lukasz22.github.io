@@ -1,0 +1,95 @@
+Założenia projektowe
+1) Stworzenie aplikacji pomagającej monitorować rezultaty wykonywanych przez Cb czynności. Aplikacja ma za zadanie ułatwić budowanie samodyscypliny oraz kreowanie własnych nawyków.
+2) klient: WWW, JS(React)
+3) serwer ? 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+Scenariusze przypadkow użycia
+
+UC1. Zarejestrowanie się w systemie
+
+Główny scenariusz
+
+1. Uzytkownik uruchamia panel rejestracyjny.
+2. Uzytkownik podaje dane rejestracyjne(imie, nazwisko, email, haslo).
+3. System stwierdza poprawność wprowadzonych danych.
+4. System dokonuje rejestracji użytkownika.
+
+Rozszerzenie scenariusza
+
+3.A.01. System stwierdza, że użytkownik nie podał danych wymaganych do utworzenia konta w serwisie.(Powrót do kroku 2.)
+3.B.01. System stwierdza, że użytkownik nie podał poprawnych danych.(Powrót do kroku 2.)
+3.B.01. System stwierdza, że podane haslo bądź inne pola nie spelniają założonych kryteriów.(Powrót do kroku 2.)
+
+UC2. Zalogowanie się w systemie
+
+Główny scenariusz
+
+1. Uzytkownik uruchamia panel logowania.
+2. Uzytkownik podaje dane logowania (email i hasło)
+3. System stwierdza poprawność wprowadzonych danych.
+4. Uzytkownik zostaje zalogowany do systemu.
+
+Rozszerzenie scenariusza
+
+3.A.01. System stwierdza, że użytkownik nie podał danych wymaganych do zalogowania się w serwisie.(Powrót do kroku 2.)
+3.B.01. System stwierdza, że podany email nie istnieje w systemie.(Powrót do kroku 2.)
+3.C.01. System stwierdza, że podane haslo jest nieprawidlowe.(Powrót do kroku 2.)
+
+UC3. Wylogowanie się z serwisu.
+
+Główny scenariusz
+
+1. Uzytkownik klika w odpowiedni przycisk na stronie.
+2. Uzytkownik zostaje wylogowany z systemu.
+
+UC4. Dołożenie nowej czynności, która ma być wykonywana przez uzytkownika.
+
+Główny scenariusz
+
+1. Uzytkownik otwiera formularz dodawania nowej czynnosci.
+2. Uzytkownik wpisuje nazwe czynności.
+3. Uzytkownik wpisuje dluzszy opis czynności.
+6. Użytkownik podaje kategorie danej czynności(wiedza, akt. fizyczna, rozwój duchowy, itd.)
+4. Użytkownik zaznacza, czy dana czynność ma być widoczna dla innych użytkowników.
+5. Uzytkownik wpisuje, przez ile dni dana czynność ma być wykonywana.
+6. Uzytkownik wpisuje, co ile dni dana czynność ma być wykonywana.
+7. System wprowadza dane do bazy.
+
+UC5. Wyświetlenie listy czynności użytkownika.
+
+Główny scenariusz
+
+1. Użytkownik otwiera zakładkę "Pokaż moje czynności"
+2. Serwis wyświetla listę czynności wraz z informacją dot. systematyczności/skuteczności wykonania danej czynności.
+
+Rozszerzenie scenariusza
+
+2.A.01 Użytkownik sortuje/filtruje dane po określonych kolumnach
+2.B.01 Użytkownik po kliknieciu na dany rekord otrzymuje szczegolowe informacje na temat postepow w systematycznosci wykonywania czynności(najlepiej w postaci kalendarza).
+2.B.01.a.01 Użytkownik usuwa daną czynność ze swojego planu.
+2.B.01.b.01 Uzytkownik zmienia stan postepow czynnosci w kalendarzu poprzez klikniecie w pola kalendarza.
+2.B.01.b.02 Serwis zapisuje zmiany w bazie. 
+ 
+UC6. Wyświetlenie listy czynności wszystkich uzytkownikow
+
+Główny scenariusz
+
+1. Użytkownik otwiera zakładkę "Pokaż czynności innych uzytkownikow"
+2. Serwis wyświetla listę czynności wraz z informacją dot. systematyczności/skuteczności wykonania danej czynności.
+
+Rozszerzenie scenariusza
+
+2.A.01 Użytkownik sortuje/filtruje dane po określonych kolumnach
+2.B.01 Użytkownik po kliknieciu na dany rekord otrzymuje szczegolowe informacje na temat postepow w systematycznosci wykonywania czynności(najlepiej w postaci kalendarza).
+
+UC7. Uzupełnienie postępów w tworzeniu samodyscypliny za aktualny dzień.
+
+Główny scenariusz
+
+1. Użytkownik otwiera zakładkę "Uzupełnij dzisiejszy dzień".
+2. Serwis wyświetla tabelę z lista czynności. Obok każdej czynności znajduje się kontrolka typu Radio button, dostępne opcje: "Wykonałem", "Nie wykonałem", "Nie doyczy."
+3. Użytkownik zaznacza odpowiednie RB.
+4. Serwis zapisuje dane do bazy.
+
+UC8. Wysyłanie przypomnien/raportow na skrzynke emailowa. ?
